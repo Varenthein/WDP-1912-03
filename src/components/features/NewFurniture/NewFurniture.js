@@ -38,7 +38,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
