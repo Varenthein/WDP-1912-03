@@ -5,7 +5,7 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA TEST
+DO UZUPEŁNIENIA TEST II
 
 ## Demo
 
