@@ -5,7 +5,7 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
+DO UZUPEŁNIENI
 
 ## Demo
 
