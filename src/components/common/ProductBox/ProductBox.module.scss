@@ -5,6 +5,12 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
 
+  &:hover {
+    .photo .buttons {
+      display: flex;
+    }
+  }
+
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
@@ -39,8 +45,10 @@
     }
 
     .buttons {
-      display: flex;
+      display: none;
       justify-content: space-between;
+      position: absolute;
+      bottom: 0;
     }
   }
 
