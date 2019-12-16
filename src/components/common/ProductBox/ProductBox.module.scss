@@ -6,6 +6,10 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
 
+  .oldPrice {
+    text-decoration: line-through;
+    color: red;
+
   &:hover {
     .photo .buttons {
       display: flex;
