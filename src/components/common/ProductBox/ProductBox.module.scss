@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../Button/Button.module.scss";
 
 .root {
   background-color: #ffffff;
@@ -8,6 +9,14 @@
   .oldPrice {
     text-decoration: line-through;
     color: red;
+
+  &:hover {
+    .photo .buttons {
+      display: flex;
+    }
+    .price {
+      background-color: $primary;
+    }
   }
 
   .photo {
@@ -44,8 +53,10 @@
     }
 
     .buttons {
-      display: flex;
+      display: none;
       justify-content: space-between;
+      position: absolute;
+      bottom: 0;
     }
   }
 
@@ -89,5 +100,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .price {
+    @extend .small;
   }
 }

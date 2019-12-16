@@ -52,6 +52,7 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
           {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
           {price}
         </Button>
+        <Button noHover>$ {price}</Button>
       </div>
     </div>
   </div>
