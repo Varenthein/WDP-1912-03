@@ -11,3 +11,36 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+
+/* CUSTOMIZE HOVER */
+    /* HOVER PARAMS IN TOPBAR */
+    $TB-transition-color: 250ms;
+    $TB-transition-bg-color: 250ms;
+    $TB-transition-transform: 250ms;
+    $TB-hover-background: inherit;
+    $TB-hover-color: #d58e32;
+
+    /* HOVER PARAMS IN MENUBAR */
+    $MB-transition-color: 250ms;
+    $MB-transition-bg-color: 250ms;
+    $MB-transition-transform: 250ms;
+    $MB-hover-background: #d58e32;
+    $MB-hover-color: #ffffff;
+    $MB-hover-transform: 0;
+
+    /* HOVER PARAMS IN NEWFURNITURE */
+    $NF-transition-color: 250ms;
+    $NF-transition-bg-color: 250ms;
+    $NF-transition-transform: 250ms;
+    $NF-hover-background: inherit;
+    $NF-hover-color: inherit;
+    $NF-hover-transform: 0;
+
+    /* HOVER PARAMS IN PRODUCTBOX */
+    $BT-transition-color: 250ms;
+    $BT-transition-bg-color: 250ms;
+    $BT-transition-transform: 250ms;
+    $BT-hover-background: #2a2a2a;
+    $BT-hover-color: #ffffff;
+    $BT-hover-transform: 0;
+/* ================================== */

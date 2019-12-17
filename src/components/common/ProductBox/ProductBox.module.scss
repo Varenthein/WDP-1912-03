@@ -84,5 +84,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a {
+      transition: color $BT-transition-color,
+                  background-color $BT-transition-bg-color,
+                  transform $BT-transition-transform;
+
+      &:hover {
+        color: $BT-hover-color !important;
+        background-color: $BT-hover-background;
+        transform: translateY($BT-hover-transform);
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -15,9 +15,12 @@
       a {
         color: #ffffff;
         font-size: 13px;
+        transition: color $TB-transition-color,
+                    background-color $TB-transition-bg-color;
 
         &:hover {
-          color: $primary;
+          color: $TB-hover-color;
+          background-color: $TB-hover-background;
           text-decoration: none;
         }
       }
