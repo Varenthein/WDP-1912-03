@@ -1,9 +1,23 @@
 @import "../../../styles/settings.scss";
+@import "../Button/Button.module.scss";
 
 .root {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: red;
+
+  &:hover {
+    .photo .buttons {
+      display: flex;
+    }
+    .price {
+      background-color: $primary;
+    }
+  }
 
   .photo {
     position: relative;
@@ -39,8 +53,10 @@
     }
 
     .buttons {
-      display: flex;
+      display: none;
       justify-content: space-between;
+      position: absolute;
+      bottom: 0;
     }
   }
 
@@ -84,5 +100,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .price {
+    @extend .small;
   }
 }
