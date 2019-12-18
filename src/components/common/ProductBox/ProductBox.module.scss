@@ -86,9 +86,9 @@
     align-items: center;
 
     a {
-      transition: color $BT-transition-color,
-                  background-color $BT-transition-bg-color,
-                  transform $BT-transition-transform;
+      transition: color $transition-color,
+                  background-color $transition-bg-color,
+                  transform $transition-transform;
 
       &:hover {
         color: $BT-hover-color !important;
