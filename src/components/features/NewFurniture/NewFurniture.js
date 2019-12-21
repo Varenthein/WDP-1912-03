@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer.js';
+import CompareProducts from '../CompareProducts/CompareProductsContainer.js';
+
 
 class NewFurniture extends React.Component {
   state = {
@@ -73,6 +75,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
+        <CompareProducts />
       </div>
     );
   }

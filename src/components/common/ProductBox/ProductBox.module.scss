@@ -41,7 +41,7 @@
       border-radius: 50%;
       color: #ffffff;
       padding: 30px 15px 5px 15px;
-      z-index: 99999;
+      z-index: 3;
     }
 
     .image {
@@ -58,6 +58,7 @@
       justify-content: space-between;
       position: absolute;
       bottom: 0;
+      color: #fff;
     }
   }
 
@@ -113,6 +114,14 @@
         transform: translateY($BT-hover-transform);
         text-decoration: none;
       }
+    }
+  }
+
+  .active {
+    background: #2a2a2a;
+
+    svg {
+      color: #fff;
     }
   }
 

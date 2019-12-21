@@ -2,15 +2,16 @@ import { connect } from 'react-redux';
 
 import ProductBox from './ProductBox.js';
 
-import { addToCompare } from '../../../redux/compareProducts.js';
+import { addToCompare, getActiveProducts } from '../../../redux/compareProducts.js';
 
-const mapStateToProps = state => ({
-  compare: 'state.stickyBar.products,',
+const mapStateToProps = (state, props) => ({
+  active: getActiveProducts(state, props),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  addProduct: image => dispatch(addToCompare({
-    image,
+  addProduct: (image, name) => dispatch(addToCompare({
+    image: image,
+    id: name
   })),
 });
 
