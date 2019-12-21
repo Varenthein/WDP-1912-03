@@ -11,7 +11,7 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, oldPrice, promo, stars, image, addProduct, active }) => (console.log(active),
+const ProductBox = ({ name, price, oldPrice, promo, stars, image, addProduct, active }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
@@ -45,17 +45,17 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image, addProduct, ac
         </Button>
         <Button variant='outline'
           onClick={event =>
-             -1 != active.indexOf(name) || active.length == 4 ?
+             -1 !== active.indexOf(name) || active.length === 4 ?
              window.alert("Can't add to compare") : addProduct(image, name)
           }
-          className={ -1 != active.indexOf(name) ? styles.active : ''}
+          className={ -1 !== active.indexOf(name) ? styles.active : ''}
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.price}>
         <Button noHover variant='small'>
-          {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
+          {oldPrice !== 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
           {price}
         </Button>
       </div>
