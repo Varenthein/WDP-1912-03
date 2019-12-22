@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FadeIn from 'react-fade-in';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,16 +14,18 @@ import Button from '../Button/Button';
 
 const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
   <div className={styles.root}>
-    <div className={styles.photo}>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <img className={styles.image} src={image} alt='Ups...'></img>
-      <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
+    <FadeIn>
+      <div className={styles.photo}>
+        {promo && <div className={styles.sale}>{promo}</div>}
+        <img className={styles.image} src={image} alt='Ups...'></img>
+        <div className={styles.buttons}>
+          <Button variant='small'>Quick View</Button>
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          </Button>
+        </div>
       </div>
-    </div>
+    </FadeIn>
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
