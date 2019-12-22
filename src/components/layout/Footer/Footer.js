@@ -100,8 +100,8 @@ const Footer = ({ children }) => (
     <div className={styles.bottomBar}>
       <div className='container'>
         <div className='row align-items-center'>
-          <div className='col'></div>
-          <div className={'col text-center ' + styles.copyright}>
+          <div className='col col-md-12 col-lg text-center '></div>
+          <div className={'col text-left ' + styles.copyright}>
             <p>©Copyright 2016 Bazar | All Rights Reserved</p>
           </div>
           <div className={'col text-right ' + styles.socialMedia}>
