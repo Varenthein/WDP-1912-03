@@ -3,8 +3,22 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Swipe from '../../layout/Swipe/Swipe';
 
 class NewFurniture extends React.Component {
+  onSwipeStart(event) {
+    console.log('Start swiping...', event);
+  }
+
+  onSwipeMove(position, event) {
+    console.log(`Moved ${position.x} pixels horizontally`, event);
+    console.log(`Moved ${position.y} pixels vertically`, event);
+  }
+
+  onSwipeEnd(event) {
+    console.log('End swiping...', event);
+  }
+
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -24,6 +38,15 @@ class NewFurniture extends React.Component {
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    const boxStyle = {
+      width: '100%',
+      height: '300px',
+      border: '1px solid black',
+      background: '#ccc',
+      padding: '20px',
+      fontSize: '3em',
+    };
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -73,6 +96,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
+        <Swipe />
       </div>
     );
   }
