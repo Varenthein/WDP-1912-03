@@ -39,21 +39,11 @@ const ProductBox = ({ name, price, promo, stars }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon
-            className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}
-            icon={faHeart}
-          >
-            Favorite
-          </FontAwesomeIcon>
+        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
+          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
-          <FontAwesomeIcon
-            className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}
-            icon={faExchangeAlt}
-          >
-            Add to compare
-          </FontAwesomeIcon>
+        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
+          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.price}>
