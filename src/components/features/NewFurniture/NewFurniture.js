@@ -3,28 +3,18 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
-import Swipe from '../../layout/Swipe/Swipe';
+import Carousel from '../../layout/Swipe/Swipe';
 
 class NewFurniture extends React.Component {
-  onSwipeStart(event) {
-    console.log('Start swiping...', event);
-  }
-
-  onSwipeMove(position, event) {
-    console.log(`Moved ${position.x} pixels horizontally`, event);
-    console.log(`Moved ${position.y} pixels vertically`, event);
-  }
-
-  onSwipeEnd(event) {
-    console.log('End swiping...', event);
-  }
 
   state = {
     activePage: 0,
+    oldPage: 0,
     activeCategory: 'bed',
   };
 
   handlePageChange(newPage) {
+    this.setState({ oldPage: this.state.activePage });
     this.setState({ activePage: newPage });
   }
 
@@ -39,15 +29,7 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
-    const boxStyle = {
-      width: '100%',
-      height: '300px',
-      border: '1px solid black',
-      background: '#ccc',
-      padding: '20px',
-      fontSize: '3em',
-    };
-
+    console.log(categoryProducts);
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -88,16 +70,18 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <Carousel newPage={this.state.activePage} oldPage={this.state.oldPage} name={'NewFurniture'}>
+            <div className='row'>
+              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+                <div key={item.id} className='col-3'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
+            </div>
+          </Carousel>
         </div>
-        <Swipe />
       </div>
+
     );
   }
 }

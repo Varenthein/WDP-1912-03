@@ -1,72 +1,48 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import ReactSwipe from 'react-swipe';
 
-class Swipe extends React.Component {
-  boxStyle = {
-    width: '80%',
-    height: '300px',
-    border: '1px solid black',
-    background: '#ccc',
-    padding: '20px',
-    fontSize: ' 1em',
-  };
+const Carousel = ({children, newPage, oldPage, name}) => {
+  let reactSwipeEl;
+  const nextName = `${name}-next`;
+  const prevName = `${name}-prev`;
 
-  state = {
-    positionX: 0,
-    mouseDown: true,
-  };
-
-  handleMouseDown = () => {
-    this.setState({ mouseDown: true });
-  };
-
-  handleMouseUp = e => {
-    this.setState({ mouseDown: false });
-    this.handleChangeX(e);
-  };
-
-  handleChangeX = event => {
-    //console.log(event);
-    let x = 0;
-    let startX = 0;
-    let swipePosition = 0;
-    const element = document.querySelector('#test');
-    const rect = element.getBoundingClientRect();
-
-    if (this.state.mouseDown === true) {
-      element.addEventListener('mousemove', e => {
-        x = e.clientX - rect.left;
-        swipePosition = x - startX;
-        console.log('start:', startX);
-
-        console.log('swipePosition:', swipePosition);
-        this.setState({ positionX: swipePosition });
-      });
+  function eventFire(el, etype){
+    if (el.fireEvent) {
+      el.fireEvent('on' + etype);
+    } else {
+      var evObj = document.createEvent('Events');
+      evObj.initEvent(etype, true, false);
+      el.dispatchEvent(evObj);
     }
-    console.log(this.state.mouseDown);
-  };
-
-  render() {
-    const drag = {
-      transform: `translateX(${this.state.positionX})`,
-      border: '1px solid red',
-    };
-
-    return (
-      <div
-        id='test'
-        style={this.boxStyle}
-        onClick={this.handleChangeX}
-        onMouseUp={this.handleMouseUp}
-      >
-        <div style={drag}>
-          testdssss
-          {this.state.positionX}
-          {drag.transform}
-        </div>
-      </div>
-    );
   }
-}
 
-export default Swipe;
+  if(newPage - oldPage > 0 ) {
+    eventFire(document.getElementById(nextName), 'click');
+    //reactSwipeEl.next() <------ my first idea, looks better without 'eventFire' but dosen't work that way
+  }
+
+  else if(newPage - oldPage < 0 ) {
+    eventFire(document.getElementById(prevName), 'click');
+    //reactSwipeEl.prev() <------ my first idea, looks better without 'eventFire' but dosen't work that way
+  }
+
+  return (
+    <div>
+      <ReactSwipe
+        className="carousel"
+        swipeOptions={{ continuous: true }}
+        ref={el => (reactSwipeEl = el)}
+      >
+        <div>{children}</div>
+        <div>{children}</div>
+        <div>{children}</div>
+
+      </ReactSwipe>
+      <button style={{display: 'none'}} id={nextName} onClick={() => reactSwipeEl.next()}>Next</button>
+      <button style={{display: 'none'}} id={prevName} onClick={() => reactSwipeEl.prev()}>Previous</button>
+    </div>
+  );
+};
+
+export default Carousel;
