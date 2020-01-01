@@ -40,10 +40,10 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
