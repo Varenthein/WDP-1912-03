@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-@import "../Button/Button.module.scss";
+// @import "../Button/Button.module.scss";
 
 .root {
   background-color: #ffffff;
@@ -15,7 +15,7 @@
     .photo .buttons {
       display: flex;
     }
-    .price {
+    .priceButton {
       background-color: $primary;
     }
   }
@@ -114,9 +114,5 @@
         text-decoration: none;
       }
     }
-  }
-
-  .price {
-    @extend .small;
   }
 }
