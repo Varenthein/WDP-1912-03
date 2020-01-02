@@ -41,7 +41,7 @@ const HotDealsBox = ({ name, price, oldPrice, promo, stars, image }) => (
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button variant='outline'>
-          <FontAwesomeIcon icon={faEye}>Favorite</FontAwesomeIcon>
+          <FontAwesomeIcon icon={faEye}>Quick view</FontAwesomeIcon>
         </Button>
         <Button variant='outline'>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
