@@ -15,8 +15,8 @@ import Button from '../Button/Button';
 const HotDealsBox = ({ name, price, oldPrice, promo, stars, image }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <img className={styles.image} src={image} alt='Ups...'></img>
+      {promo && <div className={styles.hotDeals}>HOT DEALS</div>}
+      <img className={styles.imageLeft} src={image} alt='Ups...'></img>
       <div className={styles.buttons}>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART

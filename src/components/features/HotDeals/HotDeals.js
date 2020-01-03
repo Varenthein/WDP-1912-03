@@ -1,33 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from '../FeatureBoxes/FeatureBoxes.module.scss';
+import styles from './HotDeals.module.scss';
 import HotDealsBox from '../../common/HotDealsBox/HotDealsBox';
+import HotDealsBox2 from '../../common/HotDealsBox/HotDealsBox2';
 
 class HotDeals extends React.Component {
   state = {
-    productHotDeals: 2,
+    productHotDealsLeft: 3,
+    productHotDealsRight: 11,
   };
 
   render() {
     const { products } = this.props;
-    const { productHotDeals } = this.state;
+    const { productHotDealsLeft } = this.state;
+    const { productHotDealsRight } = this.state;
 
     return (
-      <div className={styles.root}>
+      <div className={styles.root2}>
         <div className='container'>
           <div className='row'>
-            {products.slice(productHotDeals, productHotDeals + 1).map(item => (
+            {products.slice(productHotDealsLeft, productHotDealsLeft + 1).map(item => (
               <div key={item.id} className='col-4'>
                 <HotDealsBox {...item} />
               </div>
             ))}
-            <div className='col-8'>
-              <h5>
-                INDOOR <span>FURNITURE</span>
-              </h5>
-              <p>SAVE UP TO 50% OF ALL FURNITURE</p>
-            </div>
+            {products
+              .slice(productHotDealsRight, productHotDealsRight + 1)
+              .map(item => (
+                <div key={item.id} className='col-8'>
+                  <HotDealsBox2 {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
