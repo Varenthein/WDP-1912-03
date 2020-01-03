@@ -32,18 +32,6 @@
     overflow: hidden;
     align-items: flex-end;
 
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-      z-index: 99999;
-    }
-
     .hotDeals {
       position: absolute;
       top: -30px;
@@ -67,35 +55,16 @@
       object-fit: cover;
     }
 
-    .imageRight {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     .buttons {
       display: none;
       justify-content: space-between;
       position: absolute;
       top: 50%;
-      left: 30%;
-    }
-
-    .buttonCenter {
-      justify-content: space-between;
-      position: absolute;
-      top: 50%;
       left: 40%;
-      background-color: #ffffff;
-      color: #292929;
-      width: 150px;
     }
   }
 
-  .content {
+  .contentLeft {
     text-align: center;
     padding: 20px;
 

@@ -23,7 +23,7 @@ const HotDealsBox = ({ name, price, oldPrice, promo, stars, image }) => (
         </Button>
       </div>
     </div>
-    <div className={styles.content}>
+    <div className={styles.contentLeft}>
       <h5>{name}</h5>
       <div className={styles.stars}>
         {[1, 2, 3, 4, 5].map(i => (
