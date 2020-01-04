@@ -12,83 +12,190 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const HotDealsBox = ({ name, price, oldPrice, promo, stars, image }) => (
-  <div className={styles.root}>
-    <div className={styles.photo}>
-      {promo && <div className={styles.hotDeals}>HOT DEALS</div>}
+class HotDealsBox extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    promo: PropTypes.string,
+    stars: PropTypes.number,
+    image: PropTypes.string,
+    oldPrice: PropTypes.number,
+  };
 
-      <img className={styles.imageLeft} src={image} alt='Ups...'></img>
-      <div className={styles.buttons}>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
-      </div>
-    </div>
-    <div className={styles.contentLeft}>
-      <div className={styles.sale1}>
-        <span>25</span>
-        <br />
-        DAYS
-      </div>
-      <div className={styles.sale2}>
-        <span>10</span>
-        <br />
-        HRS
-      </div>
-      <div className={styles.sale3}>
-        <span>45</span>
-        <br />
-        MIN
-      </div>
-      <div className={styles.sale4}>
-        <span>30</span>
-        <br />
-        SECS
-      </div>
-      <h5>{name}</h5>
-      <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
+  state = {
+    activePage: 2,
+  };
+
+  render() {
+    const { activePage } = this.state;
+    const dots = [];
+    for (let i = 0; i < 3; i++) {
+      dots.push(
+        <li>
+          <a
+            // onClick={() => this.handlePageChange(i)}
+            className={i === activePage && styles.active}
+          >
+            page {i}
           </a>
-        ))}
-      </div>
-    </div>
-    <div className={styles.line}></div>
-    <div className={styles.actions}>
-      <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faEye}>Quick view</FontAwesomeIcon>
-        </Button>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button>
-      </div>
-      <div className={styles.price}>
-        <Button noHover variant='small'>
-          {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
-          {price}
-        </Button>
-      </div>
-    </div>
-  </div>
-);
+        </li>
+      );
+    }
 
-HotDealsBox.propTypes = {
-  children: PropTypes.node,
-  name: PropTypes.string,
-  price: PropTypes.number,
-  promo: PropTypes.string,
-  stars: PropTypes.number,
-  image: PropTypes.string,
-  oldPrice: PropTypes.number,
-};
-
+    return (
+      <div className={styles.root}>
+        <div className={styles.photo}>
+          {<div className={styles.hotDeals}>HOT DEALS</div>}
+          <div className={'col-auto ' + styles.dots}>
+            <ul>{dots}</ul>
+          </div>
+          <img className={styles.imageLeft} src={this.props.image} alt='Ups...'></img>
+          <div className={styles.buttons}>
+            <Button variant='small'>
+              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+            </Button>
+          </div>
+        </div>
+        <div className={styles.contentLeft}>
+          <div className={styles.sale1}>
+            <span>25</span>
+            <br />
+            DAYS
+          </div>
+          <div className={styles.sale2}>
+            <span>10</span>
+            <br />
+            HRS
+          </div>
+          <div className={styles.sale3}>
+            <span>45</span>
+            <br />
+            MIN
+          </div>
+          <div className={styles.sale4}>
+            <span>30</span>
+            <br />
+            SECS
+          </div>
+          <h5>{this.props.name}</h5>
+          <div className={styles.stars}>
+            {[1, 2, 3, 4, 5].map(i => (
+              <a key={i} href='#'>
+                {i <= this.props.stars ? (
+                  <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+                ) : (
+                  <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.actions}>
+          <div className={styles.outlines}>
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faEye}>Quick view</FontAwesomeIcon>
+            </Button>
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+            </Button>
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            </Button>
+          </div>
+          <div className={styles.price}>
+            <Button noHover variant='small'>
+              {this.props.oldPrice != 0 && (
+                <span className={styles.oldPrice}>$ {this.props.oldPrice} </span>
+              )}
+              $ {this.props.price}
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 export default HotDealsBox;
+
+// const HotDealsBox = ({ name, price, oldPrice, promo, stars, image }) => (
+//   <div className={styles.root}>
+//     <div className={styles.photo}>
+//       {promo && <div className={styles.hotDeals}>HOT DEALS</div>}
+
+//       <img className={styles.imageLeft} src={image} alt='Ups...'></img>
+//       <div className={styles.buttons}>
+//         <Button variant='small'>
+//           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+//         </Button>
+//       </div>
+//     </div>
+//     <div className={styles.contentLeft}>
+//       <div className={styles.sale1}>
+//         <span>25</span>
+//         <br />
+//         DAYS
+//       </div>
+//       <div className={styles.sale2}>
+//         <span>10</span>
+//         <br />
+//         HRS
+//       </div>
+//       <div className={styles.sale3}>
+//         <span>45</span>
+//         <br />
+//         MIN
+//       </div>
+//       <div className={styles.sale4}>
+//         <span>30</span>
+//         <br />
+//         SECS
+//       </div>
+//       <h5>{name}</h5>
+//       <div className={styles.stars}>
+//         {[1, 2, 3, 4, 5].map(i => (
+//           <a key={i} href='#'>
+//             {i <= stars ? (
+//               <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+//             ) : (
+//               <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+//             )}
+//           </a>
+//         ))}
+//       </div>
+//     </div>
+//     <div className={styles.line}></div>
+//     <div className={styles.actions}>
+//       <div className={styles.outlines}>
+//         <Button variant='outline'>
+//           <FontAwesomeIcon icon={faEye}>Quick view</FontAwesomeIcon>
+//         </Button>
+//         <Button variant='outline'>
+//           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+//         </Button>
+//         <Button variant='outline'>
+//           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+//         </Button>
+//       </div>
+//       <div className={styles.price}>
+//         <Button noHover variant='small'>
+//           {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
+//           {price}
+//         </Button>
+//       </div>
+//     </div>
+//   </div>
+// );
+
+// HotDealsBox.propTypes = {
+//   children: PropTypes.node,
+//   name: PropTypes.string,
+//   price: PropTypes.number,
+//   promo: PropTypes.string,
+//   stars: PropTypes.number,
+//   image: PropTypes.string,
+//   oldPrice: PropTypes.number,
+// };
+
+// export default HotDealsBox;

@@ -33,6 +33,39 @@
     overflow: hidden;
     align-items: flex-end;
 
+    .dots {
+      position: absolute;
+      right: 0;
+      top: -22px;
+      z-index: 99999;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        transform: translateY(15px);
+
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: #e1e1e1;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+
     .hotDeals {
       position: absolute;
       top: -30px;
