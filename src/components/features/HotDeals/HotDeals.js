@@ -8,7 +8,7 @@ import HotDealsBox2 from '../../common/HotDealsBox/HotDealsBox2';
 class HotDeals extends React.Component {
   state = {
     productHotDealsLeft: 3,
-    productHotDealsRight: 0,
+    productHotDealsRight: 16,
   };
 
   render() {

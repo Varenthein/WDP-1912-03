@@ -15,8 +15,9 @@
     .photo .buttons {
       display: flex;
     }
-    .price {
-      background-color: $primary;
+
+    .sale {
+      display: inline;
     }
   }
 
@@ -60,7 +61,8 @@
       justify-content: space-between;
       position: absolute;
       top: 50%;
-      left: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -80,8 +82,52 @@
         text-decoration: none;
         color: rgb(42, 42, 42);
       }
+    }
+
+    .sale {
+      display: none;
+      position: absolute;
+      background-color: rgba(41, 41, 41, 0.8);
+      border-radius: 50%;
+      color: #ffffff;
+      width: 65px;
+      height: 65px;
+      z-index: 99999;
+      bottom: 210px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px;
+
+      span {
+        font-size: 18px;
+        line-height: -10px;
+      }
+    }
+
+    .sale1 {
+      @extend .sale;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+
+    .sale2 {
+      @extend .sale;
+      left: 40%;
+      transform: translateX(-50%);
+    }
+
+    .sale3 {
+      @extend .sale;
+      left: 60%;
+      transform: translateX(-50%);
+    }
+
+    .sale4 {
+      @extend .sale;
+      left: 80%;
+      transform: translateX(-50%);
+    }
   }
-}
 
   .line {
     margin: 0 10px;
@@ -106,9 +152,8 @@
     align-items: center;
 
     a {
-      transition: color $transition-color,
-                  background-color $transition-bg-color,
-                  transform $transition-transform;
+      transition: color $transition-color, background-color $transition-bg-color,
+        transform $transition-transform;
 
       &:hover {
         color: $BT-hover-color !important;

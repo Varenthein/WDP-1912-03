@@ -39,3 +39,25 @@
     color: #ffffff;
   }
 }
+
+.buttonLeft {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 24px;
+  padding: 8px 30px;
+  width: 50%;
+  z-index: 99999;
+  text-align: center;
+}
+
+.buttonRight {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 24px;
+  padding: 8px 30px;
+  width: 50%;
+  z-index: 99999;
+  text-align: center;
+}
