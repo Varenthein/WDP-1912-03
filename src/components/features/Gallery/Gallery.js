@@ -98,18 +98,18 @@ const Gallery = ({categories, products} ) => {
               </div>
 
               <div className={styles.product}>
-              <p>{products[0].name}</p>
-              <div>
-                {[1, 2, 3, 4, 5].map(i => (
-                  <a key={i} href='#'>
-                    {i <= products[0].name.stars ? (
-                      <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-                    ) : (
-                      <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-                    )}
-                  </a>
-                ))}
-              </div>
+                <p>{products[0].name}</p>
+                <div>
+                  {[1, 2, 3, 4, 5].map(i => (
+                    <a key={i} href='#'>
+                      {i <= products[0].name.stars ? (
+                        <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+                      ) : (
+                        <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+                      )}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
