@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  position: relative;
+  margin-bottom: 250px;
+}
+
+.column {
+  flex: 0 1 50%;
+  // height: 100px;
+}
+
+.red {
+  position: relative;
+  // background-color: red;
+  flex: 0 1 50%;
+  height: 40vh;
+
+  .img {
+    position: absolute;
+    object-fit: cover;
+    width: 650px;
+    position: absolute;
+    left: 205px;
+  }
+}
+
+.blue {
+  position: absolute;
+  width: 430px;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  top: 0;
+  right: 205px;
+}
+
+.yellow {
+  position: absolute;
+  bottom: -105px;
+  right: 80px;
+  padding-top: 15px;
+  width: 430px;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  right: 205px;
+
+}

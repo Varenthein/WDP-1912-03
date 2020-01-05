@@ -1,0 +1,118 @@
+@import "../../../styles/settings.scss";
+@import "../Button/Button.module.scss";
+
+.root {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+  // width: 100%;
+
+  .photo2 {
+    position: relative;
+    padding: 60% 10px 0 10px;
+    overflow: hidden;
+    align-items: flex-end;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px;
+      position: absolute;
+      top: 7%;
+      bottom: 7%;
+      left: 5%;
+      right: 5%;
+
+      h1 {
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+
+      span {
+        font-weight: 800;
+
+      }
+
+      p {
+        color: white;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color: #d58e32;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    padding: 60% 10px 0 10px;
+    background: {
+      color: #f4f5f7;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px;
+      position: absolute;
+      top: 7%;
+      bottom: 7%;
+      left: 5%;
+      right: 5%;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      h1 {
+        position: absolute;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+        font-weight: 450;
+        top: 58%;
+        left: 2%;
+        font-size: 30px;
+      }
+
+      span {
+        position: absolute;
+        color: white;
+        padding: 7px 10px;
+        border: 2px solid white;
+        top: 82%;
+        left: 2%;
+        font-size: 24px;
+      }
+
+      p {
+        position: absolute;
+        color: white;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        top: 70%;
+        left: 2%;
+        font-size: 30px;
+      }
+    }
+  }
+}
