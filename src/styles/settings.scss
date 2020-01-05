@@ -1,39 +1,45 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$form-border-color: #292929;
-
 /* COLORS FOR CUSTOMIZATION */
-    $blue: #007bff;
-    $indigo: #6610f2;
-    $purple: #6f42c1;
-    $pink: #e83e8c;
-    $red: #dc3545;
-    $orange: #fd7e14;
-    $yellow: #ffc107;
-    $green: #28a745;
-    $teal: #20c997;
-    $cyan: #17a2b8;
-    $white: #fff;
-    $gray: #6c757d;
-    $gray-dark: #343a40;
-    $primary: #d58e32;
-    $secondary: #6c757d;
-    $success: #28a745;
-    $info: #17a2b8;
-    $warning: #ffc107;
-    $danger: #dc3545;
-    $light: #f8f9fa;
-    $dark: #343a40;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$primary-orange: #d58e32;
+$border-dark: #292929;
+$footer-dark: #363636;
+$header-dark: #434343;
+$text: #2a2a2a;
+/*                  */
+
+/* variables to edit */
+$header-topbar-bg: $header-dark;
+$header-bg: $footer-dark;
+
+$footer-claim-bg: $text;
+$footer-bg: $footer-dark;
+
+$primary: $primary-orange;
+
+$text-color: $text;
+
+$form-border-color: $border-dark;
 
 /* CUSTOMIZE HOVER */
     /* TRANSITION FOR ALL */
