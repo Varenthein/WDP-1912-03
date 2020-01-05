@@ -13,33 +13,6 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
-   _state = { swiped: false };
-   _swipe = {};
-   minDistance = 50;
-
-  _onTouchStart(e) {
-    const touch = e.touches[0];
-    this._swipe = { x: touch.clientX };
-    this.setState({ swiped: false });
-  }
-
-  _onTouchMove(e) {
-    if (e.changedTouches && e.changedTouches.length) {
-      const touch = e.changedTouches[0];
-      this._swipe.swiping = true;
-    }
-  }
-
-  _onTouchEnd(e) {
-    const touch = e.changedTouches[0];
-    const absX = Math.abs(touch.clientX - this._swipe.x);
-    if (this._swipe.swiping && absX > this.minDistance ) {
-      this.props.onSwiped && this.props.onSwiped();
-      this.setState({ swiped: true });
-    }
-    this._swipe = {};
-  }
-
   handlePageChange(newPage) {
     this.setState({ oldPage: this.state.activePage });
     this.setState({ activePage: newPage });
@@ -52,11 +25,8 @@ class NewFurniture extends React.Component {
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
-
-    console.log(categoryProducts);
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -100,21 +70,9 @@ class NewFurniture extends React.Component {
           <Carousel
           newPage={this.state.activePage}
           oldPage={this.state.oldPage}
-          name={'NewFurniture'}>
-            <div className='row'
-            onTouchStart={this._onTouchStart}
-            onTouchMove={this._onTouchMove}
-            onTouchEnd={this._onTouchEnd}
-            >
-              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-                <div key={item.id} className='col-3'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
-            </div>
-            </Carousel>
-            {`Component-${this.state.swiped ? 'swiped' : ''}`}
-
+          name={'NewFurniture'}
+          pages={categoryProducts}
+          />
         </div>
       </div>
 

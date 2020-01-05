@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactSwipe from 'react-swipe';
+import ProductBox from '../../common/ProductBox/ProductBox';
 
-const Carousel = ({children, newPage, oldPage, name}) => {
+const Carousel = ({pages, newPage, oldPage, name}) => {
   let reactSwipeEl;
   const nextName = `${name}-next`;
   const prevName = `${name}-prev`;
-
   function eventFire(el, etype){
     if (el.fireEvent) {
       el.fireEvent('on' + etype);
@@ -19,14 +18,11 @@ const Carousel = ({children, newPage, oldPage, name}) => {
 
   if(newPage - oldPage > 0 ) {
     eventFire(document.getElementById(nextName), 'click');
-    //reactSwipeEl.next() <------ my first idea, looks better without 'eventFire' but dosen't work that way
   }
 
   else if(newPage - oldPage < 0 ) {
     eventFire(document.getElementById(prevName), 'click');
-    //reactSwipeEl.prev() <------ my first idea, looks better without 'eventFire' but dosen't work that way
   }
-
   return (
     <div>
       <ReactSwipe
@@ -34,10 +30,29 @@ const Carousel = ({children, newPage, oldPage, name}) => {
         swipeOptions={{ continuous: true }}
         ref={el => (reactSwipeEl = el)}
       >
-        <div>{children}</div>
-        <div>{children}</div>
-        <div>{children}</div>
+            <div className='row' style={{margin: '0 30px 0 0'}}>
+            {pages.slice(0, 8).map(item => (
+              <div key={item.id} className='col-3'>
+                <ProductBox {...item} />
+              </div>
+            ))}
+            </div>
 
+            <div className='row'>
+            {pages.slice(8, 16).map(item => (
+              <div key={item.id} className='col-3'>
+                <ProductBox {...item} />
+              </div>
+            ))}
+            </div>
+
+            <div className='row'>
+            {pages.slice(16, 24).map(item => (
+              <div key={item.id} className='col-3'>
+                <ProductBox {...item} />
+              </div>
+            ))}
+            </div>
       </ReactSwipe>
       <button style={{display: 'none'}} id={nextName} onClick={() => reactSwipeEl.next()}>Next</button>
       <button style={{display: 'none'}} id={prevName} onClick={() => reactSwipeEl.prev()}>Previous</button>
