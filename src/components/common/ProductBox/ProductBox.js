@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { bool } from 'prop-types';
 import FadeIn from 'react-fade-in';
 
 import styles from './ProductBox.module.scss';
@@ -12,7 +12,16 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
+const ProductBox = ({
+  name,
+  price,
+  oldPrice,
+  promo,
+  stars,
+  image,
+  liked,
+  compared,
+}) => (
   <div className={styles.root}>
     <FadeIn>
       <div className={styles.photo}>
@@ -43,10 +52,10 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
+        <Button className={liked ? styles.btnActive : ''}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button className={Math.floor(Math.random() * 2) ? styles.btnActive : ''}>
+        <Button className={compared ? styles.btnActive : ''}>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -68,6 +77,8 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   image: PropTypes.string,
   oldPrice: PropTypes.number,
+  liked: PropTypes.bool,
+  compared: PropTypes.bool,
 };
 
 export default ProductBox;

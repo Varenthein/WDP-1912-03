@@ -18,7 +18,7 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      liked: false,
+      liked: true,
       compared: false,
     },
     {
@@ -33,7 +33,7 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       liked: false,
-      compared: false,
+      compared: true,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -60,7 +60,7 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      liked: false,
+      liked: true,
       compared: false,
     },
     {
