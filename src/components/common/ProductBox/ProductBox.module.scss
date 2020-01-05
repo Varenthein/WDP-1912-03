@@ -129,3 +129,10 @@
     @extend .small;
   }
 }
+.btnActive {
+  color: #fff;
+  background-color: #fd7e14;
+  padding: 4px 7px;
+  margin: 0 1px;
+  border-radius: 25px;
+}

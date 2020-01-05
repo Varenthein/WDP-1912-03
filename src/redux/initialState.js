@@ -10,7 +10,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique 1',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -22,7 +22,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
-      category: 'bed',
+      category: 'sofa',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -34,7 +34,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-3',
       name: 'Aenean Ru Bristique 3',
-      category: 'bed',
+      category: 'sofa',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -58,7 +58,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -70,7 +70,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-6',
       name: 'Aenean Ru Bristique 6',
-      category: 'bed',
+      category: 'table',
       price: 30,
       oldPrice: 38,
       stars: 2,
@@ -82,7 +82,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-7',
       name: 'Aenean Ru Bristique 7',
-      category: 'bed',
+      category: 'dining',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -94,7 +94,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-8',
       name: 'Aenean Ru Bristique 8',
-      category: 'bed',
+      category: 'sofa',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -106,7 +106,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-9',
       name: 'Aenean Ru Bristique 9',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 44,
       stars: 2,
@@ -118,7 +118,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-10',
       name: 'Aenean Ru Bristique 10',
-      category: 'bed',
+      category: 'dining',
       price: 30,
       oldPrice: 38,
       stars: 2,
@@ -130,7 +130,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-11',
       name: 'Aenean Ru Bristique 11',
-      category: 'bed',
+      category: 'sofa',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -154,7 +154,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-13',
       name: 'Aenean Ru Bristique 13',
-      category: 'bed',
+      category: 'dining',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -166,7 +166,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-14',
       name: 'Aenean Ru Bristique 14',
-      category: 'bed',
+      category: 'table',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -178,7 +178,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-15',
       name: 'Aenean Ru Bristique 15',
-      category: 'bed',
+      category: 'btable',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -190,7 +190,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-16',
       name: 'Aenean Ru Bristique 16',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -226,7 +226,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-19',
       name: 'Aenean Ru Bristique 19',
-      category: 'bed',
+      category: 'table',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -238,7 +238,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-20',
       name: 'Aenean Ru Bristique 20',
-      category: 'bed',
+      category: 'sofa',
       price: 30,
       oldPrice: 0,
       stars: 2,
@@ -262,7 +262,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-22',
       name: 'Aenean Ru Bristique 22',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 38,
       stars: 2,
@@ -286,7 +286,7 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 0,
       stars: 2,
