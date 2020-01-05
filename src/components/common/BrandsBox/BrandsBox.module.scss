@@ -4,59 +4,27 @@
 .root {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+  margin-bottom: 5px;
 
   .photo {
     position: relative;
-    padding: 60% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
+    padding: 50% 0 0 0;
+    // background: {
+      // color: #f4f5f7;
+      // size: contain;
+      // position: center;
+      // repeat: no-repeat;
+    // }
     overflow: hidden;
-    align-items: flex-end;
+    // align-items: flex-end;
 
 
     .image {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -10%;
+      // left: 0;
       width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .actions {
-    position: relative;
-    padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .buttonSliderLeft {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      &:hover {
-        background-color: #d58e32;
-        text-decoration: none;
-        color: white;
-      }
-    }
-
-    .buttonSliderRight {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-
-      &:hover {
-        background-color: #d58e32;
-        text-decoration: none;
-        color: white;
-      }
+      // object-fit: cover;
     }
   }
 }

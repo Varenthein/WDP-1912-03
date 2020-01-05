@@ -1,0 +1,49 @@
+.root {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  height: 200px;
+
+  .actions {
+    position: relative;
+    padding: 15px 10px 10px 10px;
+    // display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    .buttonSliderLeft {
+      position: absolute;
+      // left: 0;
+      bottom: 6px;
+      background-color: #000000;
+      color: #ffffff;
+      width: 20px;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .buttonSliderRight {
+      position: absolute;
+      right: 0;
+      bottom: 6px;
+      background-color: #000000;
+      color: #ffffff;
+      width: 20px;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

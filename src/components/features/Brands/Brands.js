@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Brands.module.scss';
 import BrandsBox from '../../common/BrandsBox/BrandsBox';
-// import Button from '../Button/Button';
+import Button from '../../common/Button/Button';
 
 class Brands extends React.Component {
   static propTypes = {
@@ -20,15 +20,29 @@ class Brands extends React.Component {
     const { activeBrands } = this.state;
 
     return (
-      <div className={styles.root2}>
+      <div className={styles.root}>
         <div className='container'>
+          <hr className={styles.line} />
+
           <div className='row'>
-            {brands.slice(activeBrands, activeBrands + 6).map(item => (
+            <div className={styles.actions}>
+              <Button className={styles.buttonSliderLeft} variant='buttonLeft'>
+                {'<'}
+              </Button>
+            </div>
+            {brands.slice(activeBrands, activeBrands + 5).map(item => (
               <div key={item.id} className='col-2'>
                 <BrandsBox {...item} />
               </div>
             ))}
+
+            <div className={styles.actions}>
+              <Button className={styles.buttonSliderRight} variant='buttonRight'>
+                {'>'}
+              </Button>
+            </div>
           </div>
+          <hr className={styles.line} />
         </div>
       </div>
     );
