@@ -68,10 +68,10 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <Carousel
-          newPage={this.state.activePage}
-          oldPage={this.state.oldPage}
-          name={'NewFurniture'}
-          pages={categoryProducts}
+            newPage={this.state.activePage}
+            oldPage={this.state.oldPage}
+            name={'NewFurniture'}
+            pages={categoryProducts}
           />
         </div>
       </div>
