@@ -62,6 +62,7 @@ const Gallery = ({categories, products} ) => {
                   <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon>
                 </div>
               </div>
+
               <div className={styles.slider}>
 
                 <div className={styles.btnGlr}>
