@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer.js';
+import CompareProducts from '../CompareProducts/CompareProductsContainer.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -38,7 +39,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -68,12 +68,13 @@ class NewFurniture extends React.Component {
           </div>
           <div className='row'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
+              <div key={item.id} className='col-12 col-md-6 col-lg-3'>
                 <ProductBox {...item} />
               </div>
             ))}
           </div>
         </div>
+        <CompareProducts />
       </div>
     );
   }
