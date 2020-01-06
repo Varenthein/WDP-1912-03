@@ -23,24 +23,22 @@ class Brands extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <hr className={styles.line} />
-
+          <div className={styles.actions}>
+            <Button className={styles.buttonSliderLeft} variant='buttonLeft'>
+              {'<'}
+            </Button>
+          </div>
           <div className='row'>
-            <div className={styles.actions}>
-              <Button className={styles.buttonSliderLeft} variant='buttonLeft'>
-                {'<'}
-              </Button>
-            </div>
-            {brands.slice(activeBrands, activeBrands + 5).map(item => (
+            {brands.slice(activeBrands, activeBrands + 6).map(item => (
               <div key={item.id} className='col-2'>
                 <BrandsBox {...item} />
               </div>
             ))}
-
-            <div className={styles.actions}>
-              <Button className={styles.buttonSliderRight} variant='buttonRight'>
-                {'>'}
-              </Button>
-            </div>
+          </div>
+          <div className={styles.actions}>
+            <Button className={styles.buttonSliderRight} variant='buttonRight'>
+              {'>'}
+            </Button>
           </div>
           <hr className={styles.line} />
         </div>

@@ -5,21 +5,22 @@
 
   .actions {
     position: relative;
-    padding: 15px 10px 10px 10px;
+    // margin: 0;
+    // padding: 0 10px 0 10px;
     // display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
 
     .buttonSliderLeft {
       position: absolute;
-      // left: 0;
-      bottom: 6px;
+      // bottom: 6px;
       background-color: #000000;
       color: #ffffff;
       width: 20px;
-      height: 80px;
+      // height: 80px;
       text-align: center;
       line-height: 80px;
+      z-index: 9999;
 
       &:hover {
         background-color: #d58e32;
@@ -35,7 +36,7 @@
       background-color: #000000;
       color: #ffffff;
       width: 20px;
-      height: 80px;
+      // height: 80px;
       text-align: center;
       line-height: 80px;
 
