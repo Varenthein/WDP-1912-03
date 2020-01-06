@@ -20,32 +20,42 @@ class Promotions extends React.Component {
 
     return (
       <div className={styles.root}>
-        <div className={styles.container}>
-          <div className={styles.red}>
-            {products.slice(PromotionsBoxLeft, PromotionsBoxLeft + 1).map(item => (
-              <div className={styles.img} key={item.id}>
-                <PromotionsBox1 {...item} />
-              </div>
-            ))}
-          </div>
-          <div className={styles.column}>
-            <div className={styles.blue}>
-              {products
-                .slice(PromotionsBoxRightUp, PromotionsBoxRightUp + 1)
-                .map(item => (
-                  <div className={styles.img} key={item.id}>
-                    <PromotionsBox2a {...item} />
-                  </div>
-                ))}
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              {products.slice(PromotionsBoxLeft, PromotionsBoxLeft + 1).map(item => (
+                <div key={item.id}>
+                  <PromotionsBox1 {...item} />
+                </div>
+              ))}
             </div>
-            <div className={styles.yellow}>
-              {products
-                .slice(PromotionsBoxRightDown, PromotionsBoxRightDown + 1)
-                .map(item => (
-                  <div className={styles.img} key={item.id}>
-                    <PromotionsBox2b {...item} />
+            <div className='col'>
+              <div className='row'>
+                <div className='col'>
+                  <div className={styles.box}>
+                    {products
+                      .slice(PromotionsBoxRightUp, PromotionsBoxRightUp + 1)
+                      .map(item => (
+                        <div key={item.id}>
+                          <PromotionsBox2a {...item} />
+                        </div>
+                      ))}
                   </div>
-                ))}
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col'>
+                  <div className={styles.box}>
+                    {products
+                      .slice(PromotionsBoxRightDown, PromotionsBoxRightDown + 1)
+                      .map(item => (
+                        <div key={item.id}>
+                          <PromotionsBox2b {...item} />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
