@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import CompareProducts from '../CompareProducts/CompareProductsContainer.js';
 import Carousel from '../../layout/Swipe/Swipe';
 
 class NewFurniture extends React.Component {
-
   state = {
     activePage: 0,
     oldPage: 0,
@@ -74,8 +73,8 @@ class NewFurniture extends React.Component {
             pages={categoryProducts}
           />
         </div>
+        <CompareProducts />
       </div>
-
     );
   }
 }

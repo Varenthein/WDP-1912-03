@@ -25,7 +25,7 @@ export default function reducer(statePart = [], action = {}) {
       return {
         ...statePart,
         products: [
-          ...statePart.products.filter(({ image }) => image != action.payload),
+          ...statePart.products.filter(({ image }) => image !== action.payload),
         ],
       };
     }

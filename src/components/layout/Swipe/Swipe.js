@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactSwipe from 'react-swipe';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
+import PropTypes from 'prop-types';
 
-const Carousel = ({pages, newPage, oldPage, name}) => {
+const Carousel = ({ pages, newPage, oldPage, name }) => {
   let reactSwipeEl;
   const nextName = `${name}-next`;
   const prevName = `${name}-prev`;
-  function eventFire(el, etype){
+  function eventFire(el, etype) {
     if (el.fireEvent) {
       el.fireEvent('on' + etype);
     } else {
@@ -16,21 +17,19 @@ const Carousel = ({pages, newPage, oldPage, name}) => {
     }
   }
 
-  if(newPage - oldPage > 0 ) {
+  if (newPage - oldPage > 0) {
     eventFire(document.getElementById(nextName), 'click');
-  }
-
-  else if(newPage - oldPage < 0 ) {
+  } else if (newPage - oldPage < 0) {
     eventFire(document.getElementById(prevName), 'click');
   }
   return (
     <div>
       <ReactSwipe
-        className="carousel"
+        className='carousel'
         swipeOptions={{ continuous: true }}
         ref={el => (reactSwipeEl = el)}
       >
-        <div className='row' style={{margin: '0 30px 0 0'}}>
+        <div className='row' style={{ margin: '0 30px 0 0' }}>
           {pages.slice(0, 8).map(item => (
             <div key={item.id} className='col-3'>
               <ProductBox {...item} />
@@ -54,10 +53,29 @@ const Carousel = ({pages, newPage, oldPage, name}) => {
           ))}
         </div>
       </ReactSwipe>
-      <button style={{display: 'none'}} id={nextName} onClick={() => reactSwipeEl.next()}>Next</button>
-      <button style={{display: 'none'}} id={prevName} onClick={() => reactSwipeEl.prev()}>Previous</button>
+      <button
+        style={{ display: 'none' }}
+        id={nextName}
+        onClick={() => reactSwipeEl.next()}
+      >
+        Next
+      </button>
+      <button
+        style={{ display: 'none' }}
+        id={prevName}
+        onClick={() => reactSwipeEl.prev()}
+      >
+        Previous
+      </button>
     </div>
   );
+};
+
+Carousel.propTypes = {
+  pages: PropTypes.array,
+  newPage: PropTypes.number,
+  oldPage: PropTypes.number,
+  name: PropTypes.string,
 };
 
 export default Carousel;
