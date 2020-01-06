@@ -15,8 +15,7 @@
       a {
         color: #ffffff;
         font-size: 13px;
-        transition: color $transition-color,
-                    background-color $transition-bg-color;
+        transition: color $transition-color, background-color $transition-bg-color;
 
         &:hover {
           color: $TB-hover-color;

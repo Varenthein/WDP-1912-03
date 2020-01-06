@@ -35,9 +35,8 @@
       border-top: 4px solid #ffffff;
       font-weight: 500;
       letter-spacing: 1px;
-      transition: color $transition-color,
-                  background-color $transition-bg-color,
-                  transform $transition-transform;
+      transition: color $transition-color, background-color $transition-bg-color,
+        transform $transition-transform;
 
       &:hover {
         background-color: $MB-hover-background;

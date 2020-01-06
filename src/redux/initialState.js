@@ -18,6 +18,22 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      gallery: true,
+      galleryId: 'FEATURED',
+      galleryPhoto: [
+        'https://picsum.photos/200/300',
+        'https://picsum.photos/210/300',
+        'https://picsum.photos/220/300',
+        'https://picsum.photos/230/300',
+        'https://picsum.photos/240/300',
+        'https://picsum.photos/250/300',
+        'https://picsum.photos/260/300',
+        'https://picsum.photos/270/300',
+        'https://picsum.photos/280/300',
+        'https://picsum.photos/290/300',
+        'https://picsum.photos/211/300',
+        'https://picsum.photos/222/300',
+      ],
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -30,6 +46,22 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      gallery: true,
+      galleryId: 'TOP SELLER',
+      galleryPhoto: [
+        'https://picsum.photos/200/310',
+        'https://picsum.photos/210/320',
+        'https://picsum.photos/220/330',
+        'https://picsum.photos/230/340',
+        'https://picsum.photos/240/350',
+        'https://picsum.photos/250/360',
+        'https://picsum.photos/260/370',
+        'https://picsum.photos/270/380',
+        'https://picsum.photos/280/390',
+        'https://picsum.photos/290/311',
+        'https://picsum.photos/211/322',
+        'https://picsum.photos/222/333',
+      ],
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -42,6 +74,22 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      gallery: true,
+      galleryId: 'SALE OFF',
+      galleryPhoto: [
+        'https://picsum.photos/200/410',
+        'https://picsum.photos/210/520',
+        'https://picsum.photos/220/630',
+        'https://picsum.photos/230/740',
+        'https://picsum.photos/240/850',
+        'https://picsum.photos/250/960',
+        'https://picsum.photos/260/970',
+        'https://picsum.photos/270/971',
+        'https://picsum.photos/280/972',
+        'https://picsum.photos/290/973',
+        'https://picsum.photos/211/974',
+        'https://picsum.photos/222/975',
+      ],
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -54,11 +102,21 @@ const initialState = {
       newFurniture: true,
       image:
         'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      featuredFoto: [
-        'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        'https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+      gallery: true,
+      galleryId: 'TOP RATED',
+      galleryPhoto: [
+        'https://images.pexels.com/photos/154161/pexels-photo-154161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         'https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         'https://images.pexels.com/photos/133919/pexels-photo-133919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/154161/pexels-photo-154161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/133919/pexels-photo-133919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/154161/pexels-photo-154161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        'https://images.pexels.com/photos/133919/pexels-photo-133919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
       ],
     },
     {

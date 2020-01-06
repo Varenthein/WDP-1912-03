@@ -77,8 +77,8 @@
         text-decoration: none;
         color: rgb(42, 42, 42);
       }
+    }
   }
-}
 
   .line {
     margin: 0 10px;
@@ -103,9 +103,8 @@
     align-items: center;
 
     a {
-      transition: color $transition-color,
-                  background-color $transition-bg-color,
-                  transform $transition-transform;
+      transition: color $transition-color, background-color $transition-bg-color,
+        transform $transition-transform;
 
       &:hover {
         color: $BT-hover-color !important;
