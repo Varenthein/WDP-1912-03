@@ -26,20 +26,32 @@ const CompareProducts = ({ products, removeProduct }) => (
             </svg>
           </Button>
           <div className={styles.foto}>
-            <img src={image} alt='upss' />
-            <Button onClick={event => removeProduct(image)} className={styles.btn}>
-              X
-            </Button>
-          </div>
+          <img src={image} alt='upss' />
+          <Button onClick={event => removeProduct(image)} className={styles.btn}>
+            X
+          </Button>
         </div>
+      </div>
       ))}
     </div>
   </div>
 );
 
+
 CompareProducts.propTypes = {
+  children: PropTypes.node,
   removeProduct: PropTypes.func,
-  products: PropTypes.object,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      category: PropTypes.string,
+      price: PropTypes.number,
+      stars: PropTypes.number,
+      promo: PropTypes.string,
+      newFurniture: PropTypes.bool,
+    })
+  ),
 };
 
 export default CompareProducts;
