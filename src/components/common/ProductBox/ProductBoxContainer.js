@@ -9,10 +9,13 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  addProduct: (image, name) => dispatch(addToCompare({
-    image: image,
-    id: name
-  })),
+  addProduct: (image, name) =>
+    dispatch(
+      addToCompare({
+        image: image,
+        id: name,
+      })
+    ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);

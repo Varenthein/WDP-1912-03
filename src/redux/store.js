@@ -6,7 +6,6 @@ import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import compareReducer from './compareProducts';
 
-
 // define reducers
 const reducers = {
   cart: cartReducer,

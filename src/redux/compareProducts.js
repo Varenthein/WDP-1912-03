@@ -1,7 +1,5 @@
-
-
-export const getActiveProducts = ({compare}, {name}) => compare.products.map( ({id}) => id );
-
+export const getActiveProducts = ({ compare }, { name }) =>
+  compare.products.map(({ id }) => id);
 
 const reducerName = 'compare';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -9,7 +7,6 @@ const createActionName = name => `app/${reducerName}/${name}`;
 /* action types */
 const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROM_COMPARE');
-
 
 /* action creators */
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
@@ -27,7 +24,9 @@ export default function reducer(statePart = [], action = {}) {
     case REMOVE_FROM_COMPARE: {
       return {
         ...statePart,
-        products: [...statePart.products.filter( ({image}) => image != action.payload)],
+        products: [
+          ...statePart.products.filter(({ image }) => image != action.payload),
+        ],
       };
     }
     default:
