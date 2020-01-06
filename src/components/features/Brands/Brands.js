@@ -29,13 +29,15 @@ class Brands extends React.Component {
         <div className='container'>
           <hr className={styles.line} />
           <div className={styles.actions}>
-            <Button
-              className={styles.buttonSliderLeft}
-              variant='buttonLeft'
-              onClick={() => this.handleSliderChange(activeBrands - 6)}
-            >
-              {'<'}
-            </Button>
+            <div className='d-sm-none d-lg-block'>
+              <Button
+                className={styles.buttonSliderLeft}
+                variant='buttonLeft'
+                onClick={() => this.handleSliderChange(activeBrands - 6)}
+              >
+                {'<'}
+              </Button>
+            </div>
           </div>
           <div className='row'>
             {brands.slice(activeBrands, activeBrands + 6).map(item => (
@@ -50,13 +52,15 @@ class Brands extends React.Component {
             ))}
           </div>
           <div className={styles.actions}>
-            <Button
-              className={styles.buttonSliderRight}
-              variant='buttonRight'
-              onClick={() => this.handleSliderChange(activeBrands + 6)}
-            >
-              {'>'}
-            </Button>
+            <div className='d-sm-none d-lg-block'>
+              <Button
+                className={styles.buttonSliderRight}
+                variant='buttonRight'
+                onClick={() => this.handleSliderChange(activeBrands + 6)}
+              >
+                {'>'}
+              </Button>
+            </div>
           </div>
           <hr className={styles.line} />
         </div>
