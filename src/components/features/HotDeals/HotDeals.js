@@ -26,7 +26,7 @@ class HotDeals extends React.Component {
         <div className='container'>
           <div className='row'>
             {products.slice(productHotDealsLeft, productHotDealsLeft + 1).map(item => (
-              <div key={item.id} className='col-4 d-sm-none d-lg-block'>
+              <div key={item.id} className='col-lg-4 d-sm-none d-lg-block'>
                 <HotDealsBox {...item} />
               </div>
             ))}
