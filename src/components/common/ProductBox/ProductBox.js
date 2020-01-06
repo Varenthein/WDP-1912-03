@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { bool } from 'prop-types';
+import PropTypes from 'prop-types';
 import FadeIn from 'react-fade-in';
 
 import styles from './ProductBox.module.scss';
@@ -52,7 +52,10 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button className={liked ? styles.btnActive : ''}>
+        <Button
+          className={liked ? styles.btnActive : ''}
+          onClick={() => this.handleLiked()}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button className={compared ? styles.btnActive : ''}>
