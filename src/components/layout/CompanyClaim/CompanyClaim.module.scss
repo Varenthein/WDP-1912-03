@@ -70,7 +70,7 @@
     }
   }
 
-  @media all and (max-width: 736px) {
+  @media all and (max-width: 500px) {
     img {
       display: flex;
       align-items: left;
@@ -85,7 +85,7 @@
       }
     }
     .phoneNumber {
-      margin-left: 230px;
+      margin-left: 260px;
       margin-right: 0;
       top: 60px;
 
