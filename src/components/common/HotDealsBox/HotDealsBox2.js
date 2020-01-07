@@ -14,21 +14,11 @@ const HotDealsBox2 = ({ image }) => (
           SHOP NOW
         </Button>
       </div>
-
       <div className={styles.content}>
         <h1>
           INDOOR<span> FURNITURE</span>
         </h1>
         <p>SAVE UP TO 50% OF ALL FURNITURE</p>
-      </div>
-
-      <div className={styles.actions}>
-        <Button className={styles.buttonSliderLeft} variant='buttonLeft'>
-          {'<'}
-        </Button>
-        <Button className={styles.buttonSliderRight} variant='buttonRight'>
-          {'>'}
-        </Button>
       </div>
     </div>
   </div>

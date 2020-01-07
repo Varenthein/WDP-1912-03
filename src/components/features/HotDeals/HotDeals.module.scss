@@ -1,6 +1,37 @@
 @import "../../../styles/settings.scss";
 
-
 .root2 {
   padding: 2rem 0;
+
+  .actions {
+    position: relative;
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .buttonSliderLeft {
+      position: absolute;
+      left: 0;
+      top: -40px;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .buttonSliderRight {
+      position: absolute;
+      right: 0;
+      top: -40px;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
 }

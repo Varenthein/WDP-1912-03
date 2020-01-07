@@ -4,12 +4,17 @@ import PropTypes from 'prop-types';
 import styles from './HotDeals.module.scss';
 import HotDealsBox from '../../common/HotDealsBox/HotDealsBox';
 import HotDealsBox2 from '../../common/HotDealsBox/HotDealsBox2';
+import Button from '../../common/Button/Button';
 
 class HotDeals extends React.Component {
   state = {
     productHotDealsLeft: 3,
-    productHotDealsRight: 16,
+    productHotDealsRight: 7,
   };
+
+  handleSliderChange(newProductHotDealsRight) {
+    this.setState({ productHotDealsRight: newProductHotDealsRight });
+  }
 
   render() {
     const { products } = this.props;
@@ -21,15 +26,31 @@ class HotDeals extends React.Component {
         <div className='container'>
           <div className='row'>
             {products.slice(productHotDealsLeft, productHotDealsLeft + 1).map(item => (
-              <div key={item.id} className='col-4'>
+              <div key={item.id} className='col-lg-4 d-sm-none d-lg-block'>
                 <HotDealsBox {...item} />
               </div>
             ))}
             {products
               .slice(productHotDealsRight, productHotDealsRight + 1)
               .map(item => (
-                <div key={item.id} className='col-8'>
+                <div key={item.id} className='col-lg-8 col-sm-12 d-lg-block'>
                   <HotDealsBox2 {...item} />
+                  <div className={styles.actions}>
+                    <Button
+                      className={styles.buttonSliderLeft}
+                      variant='buttonLeft'
+                      onClick={() => this.handleSliderChange(productHotDealsRight - 1)}
+                    >
+                      {'<'}
+                    </Button>
+                    <Button
+                      className={styles.buttonSliderRight}
+                      variant='buttonRight'
+                      onClick={() => this.handleSliderChange(productHotDealsRight + 1)}
+                    >
+                      {'>'}
+                    </Button>
+                  </div>
                 </div>
               ))}
           </div>
