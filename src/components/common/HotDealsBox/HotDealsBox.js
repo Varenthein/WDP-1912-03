@@ -106,7 +106,7 @@ class HotDealsBox extends React.Component {
           </div>
           <div className={styles.price}>
             <Button noHover variant='small'>
-              {this.props.oldPrice != 0 && (
+              {this.props.oldPrice !== 0 && (
                 <span className={styles.oldPrice}>$ {this.props.oldPrice} </span>
               )}
               $ {this.props.price}
@@ -180,7 +180,7 @@ export default HotDealsBox;
 //       </div>
 //       <div className={styles.price}>
 //         <Button noHover variant='small'>
-//           {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
+//           {oldPrice !== 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
 //           {price}
 //         </Button>
 //       </div>

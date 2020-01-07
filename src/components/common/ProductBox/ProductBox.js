@@ -62,7 +62,7 @@ const ProductBox = ({
           <Button
             className={-1 !== activeProducts ? styles.btnActive : ''}
             onClick={event =>
-              -1 !== activeProducts || active.length === 4
+              -1 !== activeProducts || active.length == 4
                 ? window.alert("Can't add to compare")
                 : addProduct(image, name)
             }
@@ -71,8 +71,8 @@ const ProductBox = ({
           </Button>
         </div>
         <div className={styles.price}>
-          <Button noHover variant='small' className={styles.priceButton}>
-            {oldPrice != 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
+          <Button noHover variant='small'>
+            {oldPrice !== 0 && <span className={styles.oldPrice}>$ {oldPrice} </span>}${' '}
             {price}
           </Button>
         </div>
