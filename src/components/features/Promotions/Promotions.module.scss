@@ -1,0 +1,22 @@
+.box {
+  height: 157px;
+  position: relative;
+  margin-bottom: 10px;
+  background: {
+    color: #f4f5f7;
+    size: contain;
+    position: center;
+    repeat: no-repeat;
+  }
+  overflow: hidden;
+  align-items: center;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
