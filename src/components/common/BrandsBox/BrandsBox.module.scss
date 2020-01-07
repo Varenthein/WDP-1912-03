@@ -1,0 +1,30 @@
+@import "../../../styles/settings.scss";
+@import "../Button/Button.module.scss";
+
+.root {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 5px;
+
+  .photo {
+    position: relative;
+    padding: 50% 0 0 0;
+    // background: {
+      // color: #f4f5f7;
+      // size: contain;
+      // position: center;
+      // repeat: no-repeat;
+    // }
+    overflow: hidden;
+    // align-items: flex-end;
+
+
+    .image {
+      position: absolute;
+      top: -10%;
+      // left: 0;
+      width: 100%;
+      // object-fit: cover;
+    }
+  }
+}
