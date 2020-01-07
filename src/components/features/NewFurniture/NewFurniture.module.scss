@@ -48,9 +48,8 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: color $transition-color,
-                        background-color $transition-bg-color,
-                        transform $transition-transform;
+            transition: color $transition-color, background-color $transition-bg-color,
+              transform $transition-transform;
 
             &:hover {
               cursor: pointer;
