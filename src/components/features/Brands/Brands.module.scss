@@ -1,0 +1,50 @@
+.root {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  height: 200px;
+
+  .actions {
+    position: relative;
+    // margin: 0;
+    // padding: 0 10px 0 10px;
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .buttonSliderLeft {
+      position: absolute;
+      // bottom: 6px;
+      background-color: #000000;
+      color: #ffffff;
+      width: 20px;
+      // height: 80px;
+      text-align: center;
+      line-height: 80px;
+      z-index: 9999;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .buttonSliderRight {
+      position: absolute;
+      right: 0;
+      bottom: 6px;
+      background-color: #000000;
+      color: #ffffff;
+      width: 20px;
+      // height: 80px;
+      text-align: center;
+      line-height: 80px;
+
+      &:hover {
+        background-color: #d58e32;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

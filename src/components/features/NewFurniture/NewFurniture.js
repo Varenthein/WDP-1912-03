@@ -2,15 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import CompareProducts from '../CompareProducts/CompareProductsContainer.js';
+import Carousel from '../../layout/Swipe/Swipe';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
+    oldPage: 0,
     activeCategory: 'bed',
   };
 
   handlePageChange(newPage) {
+    this.setState({ oldPage: this.state.activePage });
     this.setState({ activePage: newPage });
   }
 
@@ -21,10 +24,8 @@ class NewFurniture extends React.Component {
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
-
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -65,14 +66,14 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <Carousel
+            newPage={this.state.activePage}
+            oldPage={this.state.oldPage}
+            name={'NewFurniture'}
+            pages={categoryProducts}
+          />
         </div>
+        <CompareProducts />
       </div>
     );
   }
