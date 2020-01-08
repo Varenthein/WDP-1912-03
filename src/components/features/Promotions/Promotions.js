@@ -22,14 +22,14 @@ class Promotions extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col'>
+            <div className='col-lg-6 col-sm-12'>
               {products.slice(PromotionsBoxLeft, PromotionsBoxLeft + 1).map(item => (
                 <div key={item.id}>
                   <PromotionsBox1 {...item} />
                 </div>
               ))}
             </div>
-            <div className='col'>
+            <div className='col-lg-6 col-sm-12'>
               <div className='row'>
                 <div className='col'>
                   <div className={styles.box}>
