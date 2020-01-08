@@ -69,4 +69,31 @@
       }
     }
   }
+
+  @media all and (max-width: 500px) {
+    img {
+      display: flex;
+      align-items: left;
+      margin: -80px 20px;
+    }
+    .cart {
+      &Box {
+        display: inline-block;
+        position: relative;
+        color: #fff;
+        top: -70px;
+      }
+    }
+    .phoneNumber {
+      margin-left: 260px;
+      margin-right: 0;
+      top: 60px;
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-right: -2.5rem;
+      }
+    }
+  }
 }

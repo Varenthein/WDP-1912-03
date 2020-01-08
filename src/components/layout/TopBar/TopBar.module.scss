@@ -41,4 +41,12 @@
       margin-right: 5px;
     }
   }
+  @media all and (max-width: 736px) {
+    .topMenu .icon {
+      font-size: 20px;
+    }
+    .topMenu a {
+      font-size: 0;
+    }
+  }
 }
