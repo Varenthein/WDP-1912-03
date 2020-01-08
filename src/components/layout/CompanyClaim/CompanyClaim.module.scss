@@ -77,10 +77,10 @@
       margin: -80px 20px;
     }
     .cart {
-      .cartBox {
+      &Box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: #fff;
         top: -70px;
       }
     }
